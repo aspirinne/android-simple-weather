@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SimpleWeather</string>
+    <string name="refresh_weather">Press REFRESH button</string>
+    <string name="refresh_btn">REFRESH</string>
+    <string name="api_key">c3d107b5a0441a124a4686347c8d53da</string>
+    <string name="edit_city">Put your city as \"London, UK\"</string>
+</resources>
