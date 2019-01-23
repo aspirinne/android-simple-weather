@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
             getCurrentWeather(current_city);
         }
         else {
-
             Intent intent = new Intent(this, CityEditActivity.class);
             startActivity(intent);
             current_city = myPreferences.getString("CITY", "unknown");
@@ -38,8 +37,16 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void changeCity(View view) {
+        Intent intent = new Intent(this, CityEditActivity.class);
+        startActivity(intent);
+    }
+
     public void refreshWeather(View view) {
-        getCurrentWeather("Kazan, RU");
+        SharedPreferences myPreferences = getApplicationContext().getSharedPreferences("WEATHER_SETTINGS", MODE_PRIVATE);
+        String city = myPreferences.getString("CITY", "unknown");
+
+        getCurrentWeather(city);
     }
 
     public void getCurrentWeather(String city) {
